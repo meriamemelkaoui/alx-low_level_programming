@@ -8,11 +8,11 @@
  * Return: 0 is success
  */
 int _strlen(char *str)
+
 {
 	int len  = 0;
 
 	while (*str++)
-	
-		len++;
+	len++;
 	return (len);
 }
