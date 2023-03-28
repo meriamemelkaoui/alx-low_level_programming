@@ -9,16 +9,28 @@
  */
 void rev_string(char *s)
 {
-	int len = 0, index = 0;
-	char tmp;
+	int a = 0, b, c;
+	char d;
 
-	while (s[index++])
-	len++;
-
-	for (index = len -1; index >= len / 2; index--)
+	while (s[a] != '\0')
 	{
-	tmp = s[index];
-	s[index] = s[len - index - 1];
-	s[len - index - 1] = tmp;
+		a++;
 	}
+	c = a - 1;
+	for (b = 0; c >= 0 && b < c; c--, b++)
+	{
+		d = s[b];
+		s[b] = s[c];
+		s[c] = d;
+	}
+}
+
+int main(void)
+{
+    char s[10] = "My School";
+
+    printf("%s\n", s);
+    rev_string(s);
+    printf("%s\n", s);
+    return (0);
 }
