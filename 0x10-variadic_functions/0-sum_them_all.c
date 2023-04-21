@@ -24,4 +24,5 @@ for (i = 0; i < n; i++)
 nSum += va_arg(ap, unsigned int);
 va_end(ap);
 return (nSum);
+i
 }
